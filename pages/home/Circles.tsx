@@ -1,7 +1,7 @@
 import styled, {css} from 'styled-components'
 import Link from 'next/link'
 
-import { containerStyle } from './shared'
+import { containerStyle } from '../../util/shared'
 
 export default function Circles() {
     return (

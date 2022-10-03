@@ -1,5 +1,5 @@
 import styled from 'styled-components'
-import { containerStyle } from './shared'
+import { containerStyle, Salutation } from '../../util/shared'
 
 export default function Text() {
     return (
@@ -16,16 +16,6 @@ export default function Text() {
 
 const Container = styled.div`
     ${containerStyle}
-`
-
-const Salutation = styled.h1`
-    font-size: 84px;
-    margin: 0;
-    /* padding-bottom: 0; */
-    color: rgb(190, 211, 196);
-    line-height: 1.25; 
-    max-width: 1px;
-    font-family: 'Bungee Shade'
 `
 
 const About = styled.p`

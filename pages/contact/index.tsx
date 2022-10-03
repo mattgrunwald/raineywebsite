@@ -1,7 +1,9 @@
 import type { NextPage } from 'next'
 
+import ComingSoon from '../../util/ComingSoon'
+
 const Contact: NextPage = () => {
-    return <div>Contact</div>
+    return <ComingSoon path='contact'/>
 }
 
 export default Contact
