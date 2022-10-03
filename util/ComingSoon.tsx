@@ -1,4 +1,5 @@
 import styled from "styled-components"
+import { COLUMN } from "./constants"
 
 import { containerStyle, Salutation} from './shared'
 
@@ -37,5 +38,5 @@ const Container = styled.div`
     display: flex;   
     justify-content: center;
     align-items: center;
-    min-width: 750px;
+    ${COLUMN}
 `

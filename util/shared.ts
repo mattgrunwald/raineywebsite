@@ -33,7 +33,7 @@ export const Container = styled.div`
     flex-wrap: wrap;
     animation: ${fadeIn} .5s linear;
     transition: visibility .5s linear;
-    min-width: 750px;
+
 `
 
 export const Salutation = styled.h1`

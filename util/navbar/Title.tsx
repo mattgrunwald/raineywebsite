@@ -1,3 +1,4 @@
+import Link from 'next/link'
 import styled from 'styled-components'
 
 
@@ -5,10 +6,14 @@ export default function Title() {
     return (
         <TitleContainer>
             <LogoContainer>
-                <Logo src='/raindrops.webp'/>
+                <Link href='/'>
+                    <Logo src='/raindrops.webp'/>
+                </Link>
             </LogoContainer>
             <div >
-                <Name><b>Rainey Grunwald</b></Name>
+                <Link href='/'>
+                    <Name><b>Rainey Grunwald</b></Name>
+                </Link>
                 <div>UX/UI Designer / Graphic Designer / Illustrator</div>
             </div>
         </TitleContainer>
@@ -29,9 +34,17 @@ const Logo = styled.img`
     height: 3.6rem;
     margin-right: 1rem;
     object-fit: contain;
+
+    &:hover {
+        cursor: pointer;
+    }
 `
 
 const Name = styled.div`
-margin-right: 1rem;
-    font-size: 24px;    
+    margin-right: 1rem;
+    font-size: 24px;   
+    
+    &:hover {
+        cursor: pointer;
+    }
 `
