@@ -1,6 +1,8 @@
 import styled, {css} from 'styled-components'
 import Link from 'next/link'
 
+import { containerStyle } from './shared'
+
 export default function Circles() {
     return (
         <Container>
@@ -18,20 +20,17 @@ export default function Circles() {
 }
 
 const Container = styled.div`
+    ${containerStyle}
     padding-top: 4rem;
-    display: flex;
-    max-width: 28%;
-    height: 70vh;
-    margin: 2rem;
-    align-items: center;
     flex-direction: column;
 `
 
 const Img = styled.img`
-    width: 100%;
     object-fit: contain;
     border: 5px solid rgb(190, 211, 196);
-    border-radius: 50%;`
+    border-radius: 50%;
+    max-width: 425px;
+    `
 
 const CircleLinks = styled.div`
     margin-top: 2rem;

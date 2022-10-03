@@ -27,8 +27,10 @@ const Containers = styled.div`
     flex-direction: row;
     justify-content: center;
     align-items: center;
+    flex-wrap: wrap;
     animation: ${fadeIn} .5s linear;
     transition: visibility .5s linear;
+    min-width: 750px;
 `
 
 

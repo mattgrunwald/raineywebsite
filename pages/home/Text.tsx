@@ -1,4 +1,5 @@
 import styled from 'styled-components'
+import { containerStyle } from './shared'
 
 export default function Text() {
     return (
@@ -14,11 +15,7 @@ export default function Text() {
 }
 
 const Container = styled.div`
-    display: flex;
-    max-width: 28%;
-    height: 70vh;
-    margin: 2rem;
-    align-items: center;
+    ${containerStyle}
 `
 
 const Salutation = styled.h1`
@@ -33,4 +30,5 @@ const Salutation = styled.h1`
 
 const About = styled.p`
     margin-top: 1rem;
+    width: 25rem;
 `
