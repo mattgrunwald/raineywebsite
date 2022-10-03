@@ -27,8 +27,8 @@ const Containers = styled.div`
     flex-direction: row;
     justify-content: center;
     align-items: center;
-    animation: ${fadeIn} 1s linear;
-    transition: visibility 1s linear;
+    animation: ${fadeIn} .5s linear;
+    transition: visibility .5s linear;
 `
 
 

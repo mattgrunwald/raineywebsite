@@ -49,8 +49,7 @@ const circleLink = css`
     border-radius: 50%;
     height: 8rem;
     width: 8rem;
-    font-size: 24px; 
-    transition: 0.3s;   
+    font-size: 24px;   
     &:hover {
         cursor: pointer
     }
