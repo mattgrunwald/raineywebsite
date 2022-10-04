@@ -56,7 +56,7 @@ const circleLink = css`
     width: 8rem;
     font-size: 24px;   
     &:hover {
-        cursor: pointer
+        cursor: pointer;
     }
 `
 
