@@ -2,6 +2,7 @@ import styled, {css} from 'styled-components'
 import Link from 'next/link'
 
 import { containerStyle } from '../../util/shared'
+import { COMPUTER, MOBILE } from '../../util/constants'
 
 export default function Circles() {
     return (
@@ -28,7 +29,13 @@ const Img = styled.img`
     object-fit: contain;
     border: 5px solid rgb(190, 211, 196);
     border-radius: 50%;
-    max-width: 425px;
+    
+    @media (${COMPUTER}){
+        max-width: 425px;
+    }
+    @media (${MOBILE}){
+        max-width: 350px;
+    }
     `
 
 const CircleLinks = styled.div`
