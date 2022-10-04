@@ -7,12 +7,12 @@ export const containerStyle = css`
     justify-content: center;
     align-items: center;
     @media (${COMPUTER}) {
-        max-width: 28%;
-        min-width: 400px;
+        max-width: 45%;
+        min-width: 350px;
         height: 75vh;
     }
     @media (${MOBILE}) {
-        width: 100%;
+        width: 90vw%;
     }
 `
 
@@ -36,11 +36,47 @@ export const Container = styled.div`
 
 `
 
-export const Salutation = styled.h1`
-    font-size: 84px;
+export const textStyles = css`
+    @media(${COMPUTER}) {
+        width: 25rem;
+    }
+
+    @media(${MOBILE}) {
+        width: 20rem;
+    }
+`
+
+const salutationStyles = css`
     margin: 0;
     color: rgb(190, 211, 196);
     line-height: 1.25; 
-    width: 25rem;
-    font-family: 'Bungee Shade'
+    ${textStyles}
+    font-family: 'Bungee Shade';
+`
+
+export const Salutation = styled.h1`
+    ${salutationStyles}
+    @media (${COMPUTER}) {
+        font-size: 84px;
+    }
+
+    @media (${MOBILE}) {
+        font-size: 72px;
+    }
+`
+
+export const SmallSalutation = styled.h1`
+    ${salutationStyles}
+    @media (${COMPUTER}) {
+        font-size: 84px;
+    }
+
+    @media (${MOBILE}) {
+        font-size: 64px;
+    }
+`
+
+export const About = styled.p`
+    margin-top: 1rem;
+    ${textStyles}
 `

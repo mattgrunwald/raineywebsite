@@ -1,7 +1,7 @@
 import styled from "styled-components"
 import { COLUMN } from "./constants"
 
-import { containerStyle, Salutation} from './shared'
+import { SmallSalutation, About} from './shared'
 
 type ComingSoonProps = {
     path: string
@@ -11,16 +11,12 @@ export default function ComingSoon(props: ComingSoonProps) {
     return (
         <Container>
             <Centered>
-                <Salutation>Coming Soon!</Salutation>
-                <div>In the meantime you can check out my Wix site <a href={url}>here</a></div>
+                <SmallSalutation>Coming Soon!</SmallSalutation>
+                <About>In the meantime you can check out my Wix site <a href={url}>here</a></About>
             </Centered>
         </Container>
     )
 }
-
-// const Container = styled.div`
-// ${containerStyle}
-// `
 
 const Centered = styled.div`
     width: 30rem;
@@ -38,5 +34,5 @@ const Container = styled.div`
     display: flex;   
     justify-content: center;
     align-items: center;
-    ${COLUMN}
+    // ${COLUMN}
 `
