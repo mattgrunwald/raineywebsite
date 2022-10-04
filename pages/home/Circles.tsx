@@ -21,7 +21,6 @@ export default function Circles() {
 
 const Container = styled.div`
     ${containerStyle}
-    padding-top: 4rem;
     flex-direction: column;
 `
 

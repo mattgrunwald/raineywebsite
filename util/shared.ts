@@ -4,11 +4,12 @@ import { MOBILE, COMPUTER } from './constants'
 export const containerStyle = css`
     display: flex;
     margin: 2rem;
+    justify-content: center;
     align-items: center;
     @media (${COMPUTER}) {
         max-width: 28%;
-        min-width: 425px;
-        height: 70vh;
+        min-width: 400px;
+        height: 75vh;
     }
     @media (${MOBILE}) {
         width: 100%
