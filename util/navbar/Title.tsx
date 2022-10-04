@@ -52,7 +52,7 @@ const Name = styled.div`
     }
 
     @media(${MOBILE}) {
-        margin-top: .5rem;
+        margin-top: .25rem;
     }
 `
 

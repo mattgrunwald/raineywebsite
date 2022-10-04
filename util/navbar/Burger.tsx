@@ -1,5 +1,5 @@
-import styled from 'styled-components'
-import { slide as Menu } from 'react-burger-menu'
+import styled, {keyframes} from 'styled-components'
+import Hamburger from 'hamburger-react'
 
 import { computerHide } from '../shared'
 import { useState } from 'react'
@@ -8,26 +8,34 @@ import Link from 'next/link'
 export default function Burger() {
     const [isOpen, setOpen] = useState(false)
     
-    function handleClick() {
+    function close() {
         setOpen(false)
     }
 
     function handleChange(state: any) {
         setOpen(state.isOpen)
     }
+
+    function handleClick() {
+        setOpen(!isOpen)
+    }
     return (
         <BurgerContainer>
-            <Menu right isOpen={isOpen} onStateChange={handleChange} styles={styles}>
-                <Item>
-                    <Link id="home" className="menu-item" href="/home"><A onClick={handleClick}>Home</A></Link>
-                </Item>
-                <Item>
-                    <Link id="projects" className="menu-item" href="/projects"><A onClick={handleClick}>Projects</A></Link>
-                </Item>
-                <Item>
-                    <Link id="contact" className="menu-item" href="/contact"><A onClick={handleClick}>Contact</A></Link>
-                </Item>
-            </Menu>
+            <Hamburger toggled={isOpen} toggle={handleClick}/>
+            { isOpen && 
+                <Menu>
+                    <Item>
+                        <Link id="home" href="/home"><A onClick={close}>Home</A></Link>
+                    </Item>
+                    <Item>
+                        <Link id="projects" href="/projects"><A onClick={close}>Projects</A></Link>
+                    </Item>
+                    <Item>
+                        <Link id="contact" href="/contact"><A onClick={close}>Contact</A></Link>
+                    </Item>
+                </Menu>
+            
+            }
         </BurgerContainer>
     )
 }
@@ -46,41 +54,25 @@ const A = styled.span`
     cursor: pointer;
 `
 
-const styles = {
-    bmBurgerButton: {
-      position: 'fixed',
-      width: '36px',
-      height: '30px',
-      right: '18px',
-      top: '18px'
-    },
-    bmBurgerBars: {
-      background: '#373a47'
-    },
-    bmBurgerBarsHover: {
-      background: '#a90000'
-    },
-    bmCrossButton: {
-      height: '36px',
-      width: '36px'
-    },
-    bmCross: {
-      background: 'white'
-    },
-    bmMenuWrap: {
-      position: 'fixed',
-      height: '100%'
-    },
-    bmMenu: {
-      background: 'var(--mint-green)',
-      padding: '2.5em 1.5em 0',
-      fontSize: '1.15em'
-    },
-    bmMorphShape: {
-      fill: '#373a47'
-    },
-    bmItemList: {
-      color: '#b8b7ad',
-      padding: '0.8em'
-    },
-  }
+const fadeIn = keyframes`
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+`
+
+const Menu = styled.div`
+    width: 250px;
+    height: 100vh;
+    position: fixed;
+    left: 0;
+    top: 0;
+    background-color: var(--mint-green);
+    padding: 2.5em 1.5em 0;
+    fontSize: 1.15em;
+    animation: ${fadeIn} .25s linear;
+    transition: 10s;
+    left: 0;
+`
