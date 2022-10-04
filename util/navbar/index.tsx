@@ -2,6 +2,7 @@
 import styled from 'styled-components'
 import Title from './Title'
 import NavItems from './NavItems'
+import Burger from './Burger'
 
 const Header = styled.header`
     height: 10vh;
@@ -19,6 +20,7 @@ export default function Navbar() {
             <Nav>
                 <Title />
                 <NavItems />
+                <Burger />
             </Nav>
         </Header>
     )
