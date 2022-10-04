@@ -1,5 +1,8 @@
 import Link from 'next/link'
 import styled from 'styled-components'
+import { MOBILE } from '../constants'
+
+import { mobileHide } from '../shared'
 
 
 export default function Title() {
@@ -14,7 +17,7 @@ export default function Title() {
                 <Link href='/'>
                     <Name><b>Rainey Grunwald</b></Name>
                 </Link>
-                <div>UX/UI Designer / Graphic Designer / Illustrator</div>
+                <Subheading>UX/UI Designer / Graphic Designer / Illustrator</Subheading>
             </div>
         </TitleContainer>
     )
@@ -47,4 +50,12 @@ const Name = styled.div`
     &:hover {
         cursor: pointer;
     }
+
+    @media(${MOBILE}) {
+        margin-top: .5rem;
+    }
+`
+
+const Subheading = styled.div`
+    ${mobileHide}
 `

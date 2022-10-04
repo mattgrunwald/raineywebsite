@@ -46,16 +46,12 @@ export const textStyles = css`
     }
 `
 
-const salutationStyles = css`
+export const Salutation = styled.h1`
     margin: 0;
     color: rgb(190, 211, 196);
     line-height: 1.25; 
     ${textStyles}
     font-family: 'Bungee Shade';
-`
-
-export const Salutation = styled.h1`
-    ${salutationStyles}
     @media (${COMPUTER}) {
         font-size: 84px;
     }
@@ -65,8 +61,7 @@ export const Salutation = styled.h1`
     }
 `
 
-export const SmallSalutation = styled.h1`
-    ${salutationStyles}
+export const SmallSalutation = styled(Salutation)`
     @media (${COMPUTER}) {
         font-size: 84px;
     }
@@ -79,4 +74,16 @@ export const SmallSalutation = styled.h1`
 export const About = styled.p`
     margin-top: 1rem;
     ${textStyles}
+`
+
+export const mobileHide = css`
+    @media(${MOBILE}) {
+        display: none;
+    }
+`
+
+export const computerHide = css`
+    @media(${COMPUTER}) {
+        display: none;
+    }
 `

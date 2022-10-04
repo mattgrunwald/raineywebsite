@@ -1,7 +1,7 @@
 import styled from 'styled-components'
 
 import NavItem from './NavItem'
-import { MOBILE } from '../constants'
+import { mobileHide } from '../shared'
 
 export default function NavItems() {
     return (
@@ -13,8 +13,5 @@ export default function NavItems() {
 
 const Container = styled.div`
     margin-top: .5rem;
-
-    @media (${MOBILE}) {
-        display: none;
-    }
+    ${mobileHide}
 `
