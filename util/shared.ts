@@ -12,8 +12,7 @@ export const containerStyle = css`
         height: 75vh;
     }
     @media (${MOBILE}) {
-        width: 100%
-        height: 50vh;
+        width: 100%;
     }
 `
 

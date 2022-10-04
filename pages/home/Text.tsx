@@ -15,6 +15,7 @@ export default function Text() {
 }
 
 const Container = styled.div`
+    margin-left: .25rem;
     ${containerStyle}
 `
 
