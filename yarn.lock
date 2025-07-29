@@ -299,9 +299,11 @@
   version "0.0.29"
   resolved "https://registry.npmjs.org/@types/json5/-/json5-0.0.29.tgz"
 
-"@types/node@18.8.0":
-  version "18.8.0"
-  resolved "https://registry.npmjs.org/@types/node/-/node-18.8.0.tgz"
+"@types/node@24.1.0":
+  version "24.1.0"
+  resolved "https://registry.yarnpkg.com/@types/node/-/node-24.1.0.tgz#0993f7dc31ab5cc402d112315b463e383d68a49c"
+  dependencies:
+    undici-types "~7.8.0"
 
 "@types/prop-types@*":
   version "15.7.5"
@@ -1776,6 +1778,10 @@ unbox-primitive@^1.0.2:
     has-bigints "^1.0.2"
     has-symbols "^1.0.3"
     which-boxed-primitive "^1.0.2"
+
+undici-types@~7.8.0:
+  version "7.8.0"
+  resolved "https://registry.yarnpkg.com/undici-types/-/undici-types-7.8.0.tgz#de00b85b710c54122e44fbfd911f8d70174cd294"
 
 uri-js@^4.2.2:
   version "4.4.1"
